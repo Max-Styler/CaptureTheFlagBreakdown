@@ -32,7 +32,7 @@ This scan identifies the services below as potential points of entry:
 The following vulnerabilities were identified on each target:
 
 - Target 1
-  - wpscan (MILD)
+  - Wordpress Enumeration (MILD)
   - Weak Password (MILD)
   - OpenSSH (SEVERE)
   - Escalation to root (SEVERE)
@@ -98,7 +98,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - Found the hashed password for steven within the wp_users table.
         ![hashed_password](/Images/MYSQL_get_hashes.PNG)
       - Then used John the ripper to crack the hashed password (pink84).
-        ![CrackedHash](Images/use_John_to_crack_steven_PW_pink84.PNG)
+        ![CrackedHash](/Images/use_John_to_crack_steven_PW_pink84.PNG)
       - Then sshed into target1 using stevens account.
       - Used a python script to get escalate to root privilege.
         ```bash
