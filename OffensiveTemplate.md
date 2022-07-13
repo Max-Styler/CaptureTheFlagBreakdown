@@ -84,7 +84,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     ![flag3](/Images/flag3.png)
 
   - `flag4`: {715dea6c055b9fe3337544932f2941ce}
+
     - Escalation to root/openSSH
+
       - Found the hashed password for steven within the wp_users table.
         ![hashed_password](/Images/MYSQL_get_hashes.PNG)
       - Then used John the ripper to crack the hashed password (pink84).
@@ -96,4 +98,5 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         ```
         ![EscalationToRoot](/Images/steven_getshell_and_Root.PNG)
       - Then used cat to read flag4
+
         ![flag4](/Images/flag4Command.PNG)
