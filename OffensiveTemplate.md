@@ -51,13 +51,21 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag2.txt`: {fc3fd58dcdad9ab23faca6e9a36e581c}
 
     - wpscan/Weak Password/openSSH
+
       - Used wpscan to find accounts on the website
+
       ```bash
         wpscan --url http://192.168.1.110/wordpress --eu
       ```
+
       - SSHed into target1 through michaels account (used weak password.)
+
+      ```bash
         ssh michael@192.168.1.110
+      ```
+
       - Navigated to /var/www and found flag2
+
         ![flag2](/Images/flag2_michaelwww.png)
 
   - `flag3`: {afc01ab56b50591e7dccf93122770cd2}
