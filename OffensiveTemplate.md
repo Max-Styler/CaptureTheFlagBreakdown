@@ -82,13 +82,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
     ![Mysql_Login](/Images/mySQL_get_in_and_show_databases.PNG)
 
-    - Then accessed the wordpress database and used a sql request.
+    - Accessed the wordpress database and used a sql request, in order to find the flag within the table.
 
     ```sql
     SELECT * From wp_posts;
     ```
 
-    in order to find the flag within the table.
     ![flag3](/Images/flag3.png)
 
   - `flag4`: {715dea6c055b9fe3337544932f2941ce}
@@ -99,12 +98,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         ![hashed_password](/Images/MYSQL_get_hashes.PNG)
       - Then used John the ripper to crack the hashed password (pink84).
         ![CrackedHash](/Images/use_John_to_crack_steven.png)
-      - Then sshed into target1 using stevens account.
+      - SSHed into target1 using stevens account.
       - Used a python script to get escalate to root privilege.
         ```bash
         sudo python -c 'import pty;pty.spawn("/bin/bash")'
         ```
         ![EscalationToRoot](/Images/steven_getshell_and_Root.PNG)
-      - Then used cat to read flag4
+      - Used cat to read flag4
 
         ![flag4](/Images/flag4Command.PNG)
